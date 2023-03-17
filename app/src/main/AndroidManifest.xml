@@ -20,6 +20,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".EventListActivity"
+            android:label="@string/activity_event_list_name" />
     </application>
 
 </manifest>

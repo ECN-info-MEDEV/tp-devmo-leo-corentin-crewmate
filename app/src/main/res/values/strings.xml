@@ -2,5 +2,6 @@
     <string name="app_name">DevMo Corentin Leo</string>
     <string name="crewmate">Crewmate</string>
     <string name="password"></string>
-    <string name="editText_login">login</string>
+    <string name="editText_login"></string>
+    <string name="activity_event_list_name">eventList</string>
 </resources>
