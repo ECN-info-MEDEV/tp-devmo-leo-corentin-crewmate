@@ -28,6 +28,6 @@ At the bottom of the screen, three toggle buttons allow to navigate between the 
 It's an empty screen. Coding a chat is hard.
 
 ## User 
-A screen displaying the user name used when login. And that's all.
+A screen displaying the user name used when login.
 
 
