@@ -7,4 +7,7 @@
     <string name="chat">Chat</string>
     <string name="my_profile">My profile</string>
     <string name="events">Events</string>
+    <string name="event_picture">Event_picture</string>
+    <string name="date_01_01_2000">01/01/2000</string>
+    <string name="organizer_bob">Organizer: Bob</string>
 </resources>
