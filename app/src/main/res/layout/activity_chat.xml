@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ChatActivity">
 
 
     <LinearLayout
@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:checked="false"
-            android:onClick="goToEvents"
+            android:onClick="goToEvents_from_chat"
             android:text="@string/events"
             android:textAlignment="center"
             android:textOff="@string/events"
@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:checked="false"
-            android:onClick="goToProfile"
+            android:onClick="goToProfile_from_chat"
             android:text="@string/my_profile"
             android:textAlignment="center"
             android:textOff="@string/my_profile"

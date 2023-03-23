@@ -25,7 +25,7 @@ public class ChatActivity extends AppCompatActivity {
         mMy_profile = findViewById(R.id.button_profile_chatScreen);
         mChat = findViewById(R.id.button_chat_chatScreen);
         Intent intent = getIntent();
-        String user = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
+        user = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
         }
 
     public void stay_chat(View view){
@@ -38,7 +38,7 @@ public class ChatActivity extends AppCompatActivity {
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
     }
-    public void goToEvents(View view){
+    public void goToEvents_from_chat(View view){
         Log.d(LOG_TAG, "From chat to events");
         mEvents.setChecked(true);
         mChat.setChecked(false);
@@ -49,7 +49,7 @@ public class ChatActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void goToProfile(View view) {
+    public void goToProfile_from_chat(View view) {
         Log.d(LOG_TAG, "From chat to profile");
         mEvents.setChecked(false);
         mChat.setChecked(false);

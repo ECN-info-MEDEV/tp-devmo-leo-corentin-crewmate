@@ -31,8 +31,8 @@ public class ProfileActivity extends AppCompatActivity {
         textView.setText("Bonjour, "+ user);
     }
 
-    public void stay_profile(){
-        Log.d(LOG_TAG, "Stay in prfile");
+    public void stay_profile(View view){
+        Log.d(LOG_TAG, "Stay in profile");
         mMy_profile.setChecked(true);
         Context context = getApplicationContext();
         CharSequence text = "You're already there";
@@ -41,7 +41,7 @@ public class ProfileActivity extends AppCompatActivity {
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
     }
-    public void goToEvents(View view){
+    public void goToEvents_from_profile(View view){
         Log.d(LOG_TAG, "From profile to events");
         mEvents.setChecked(true);
         mChat.setChecked(false);
@@ -51,7 +51,7 @@ public class ProfileActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void goToChat(View view){
+    public void goToChat_from_profile(View view){
         Log.d(LOG_TAG, "From profile to chat");
         mEvents.setChecked(false);
         mChat.setChecked(true);
