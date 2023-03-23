@@ -23,7 +23,7 @@ At the bottom of the screen, three toggle buttons allow to navigate between the 
 When the user click on an event, it open a specific page with the informations of the event, with the title, the picture, the date, the name of the organizer, and the description of the event.
 
 ## Chat
-It's an empty screen.
+It's an empty screen, except for the navigation buttons at the bottom.
 
 ## User 
 A screen displaying the user name used when login. Of course, if developpment were to continue, it would also have a profile picture, a description, statistics...
