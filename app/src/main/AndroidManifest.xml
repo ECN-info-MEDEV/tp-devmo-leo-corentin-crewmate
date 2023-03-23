@@ -20,6 +20,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".EventListActivity"
+            android:label="@string/activity_event_list_name" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.devmocorentinleo.MainActivity" />
+
+        </activity>
     </application>
 
 </manifest>
