@@ -42,7 +42,8 @@
             android:layout_weight="1"
             android:checked="false"
             android:textOff="@string/my_profile"
-            android:textOn="@string/my_profile"/>
+            android:textOn="@string/my_profile"
+            android:onClick="goToProfile"/>
 
 
 
@@ -55,7 +56,8 @@
             android:textAlignment="center"
             android:checked="false"
             android:textOff="@string/chat"
-            android:textOn="@string/chat"/>
+            android:textOn="@string/chat"
+            android:onClick="goToChat"/>
 
     </LinearLayout>
 

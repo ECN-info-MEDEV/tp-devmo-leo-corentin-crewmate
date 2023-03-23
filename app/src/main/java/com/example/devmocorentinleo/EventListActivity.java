@@ -4,8 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Toast;
 import android.widget.ToggleButton;
+
+import android.view.View;
 
 import java.util.LinkedList;
 
@@ -38,6 +43,33 @@ public class EventListActivity extends AppCompatActivity {
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
 
+
+    }
+    public void goToChat(View view){
+        mEvents.setChecked(false);
+        mChat.setChecked(true);
+        mMy_profile.setChecked(false);
+        Intent intent = new Intent(this, ChatActivity.class);
+        startActivity(intent);
+
+    }
+
+    public void goToProfile(View view) {
+        mEvents.setChecked(false);
+        mChat.setChecked(false);
+        mMy_profile.setChecked(true);
+        Intent intent = new Intent(this, ProfileActivity.class);
+        startActivity(intent);
+    }
+
+    public void stay(View view){
+        mEvents.setChecked(true);
+        Context context = getApplicationContext();
+        CharSequence text = "You're there already";
+        int duration = Toast.LENGTH_SHORT;
+
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
 
     }
 }

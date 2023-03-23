@@ -33,6 +33,11 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(this, EventListActivity.class);
             startActivity(intent);
         }
+        else {
+            Log.d(LOG_TAG, "Incorrect user and/or password");
+            mLoginEditText.setText("");
+            mPasswdEditText.setText("");
+        }
 
     }
 }
