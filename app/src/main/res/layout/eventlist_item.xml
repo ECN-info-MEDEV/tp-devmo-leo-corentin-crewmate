@@ -1,15 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="6dp">
-    
+
+
     <TextView
         android:id="@+id/word"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="224dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="13dp"
+        android:layout_toEndOf="@+id/eventpicture"
+        android:textColor="@color/black"
+        android:textSize="20sp">
 
     </TextView>
 
-</LinearLayout>
+    <ImageView
+        android:id="@+id/eventpicture"
+        android:layout_width="63dp"
+        android:layout_height="97dp"
+        android:contentDescription="@string/event_picture"
+        app:srcCompat="@drawable/donut_circle"
+        tools:srcCompat="@tools:sample/backgrounds/scenic[1]" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="121dp"
+        android:layout_height="58dp"
+        android:layout_below="@+id/word"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_toStartOf="@+id/textView3"
+        android:layout_toEndOf="@+id/eventpicture"
+        android:text="@string/date_01_01_2000" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="58dp"
+        android:layout_below="@+id/word"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="20dp"
+        android:layout_toStartOf="@+id/button2"
+        android:text="@string/organizer_bob" />
+
+    <Button
+        android:id="@+id/button_edit"
+        android:layout_width="98dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_toEndOf="@+id/word"
+        android:text="Edit"
+        android:textSize="10sp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_edit"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:text="Delete"
+        android:textSize="10sp" />
+
+</RelativeLayout>

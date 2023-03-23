@@ -26,7 +26,7 @@ public class EventListActivity extends AppCompatActivity {
         mMy_profile = findViewById(R.id.button_profile);
         mChat = findViewById(R.id.button_chat);
         for (int i = 0; i < 20; i++) {
-            mEventList.addLast("Word " + i);
+            mEventList.addLast("Event number " + i);
         }
         // Get a handle to the RecyclerView.
         mRecyclerView = findViewById(R.id.recyclerview);
