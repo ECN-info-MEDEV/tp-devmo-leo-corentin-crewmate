@@ -16,6 +16,8 @@ public class ProfileActivity extends AppCompatActivity {
     private ToggleButton mEvents;
     private ToggleButton mMy_profile;
     private ToggleButton mChat;
+    private String user;
+    public static final String EXTRA_MESSAGE = "com.example.devmocorentinleo.extra.MESSAGE";
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,9 +26,9 @@ public class ProfileActivity extends AppCompatActivity {
         mMy_profile = findViewById(R.id.button_profile_profileScreen);
         mChat = findViewById(R.id.button_chat_profileScreen);
         Intent intent = getIntent();
-        String user = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
+        user = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
         TextView textView = findViewById(R.id.text_user);
-        textView.setText(user);
+        textView.setText("Bonjour, "+ user);
     }
 
     public void stay_profile(){
@@ -45,6 +47,7 @@ public class ProfileActivity extends AppCompatActivity {
         mChat.setChecked(false);
         mMy_profile.setChecked(false);
         Intent intent = new Intent(this, EventListActivity.class);
+        intent.putExtra(EXTRA_MESSAGE, user);
         startActivity(intent);
     }
 

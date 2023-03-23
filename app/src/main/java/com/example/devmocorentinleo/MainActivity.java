@@ -32,11 +32,12 @@ public class MainActivity extends AppCompatActivity {
         Log.d(LOG_TAG, "Comparison shall be done");
         Log.d(LOG_TAG, "Login is " + login);
         Log.d(LOG_TAG, "Passwd is " + pass);
-        if (login.equals("admin") && pass.equals("admin")) { //Yes, this isn't a good way to do it
+        if (pass.equals("admin")) { //Yes, this isn't a good way to do it
             Log.d(LOG_TAG, "We are currently in the if");
             Intent intent = new Intent(this, EventListActivity.class);
-            startActivity(intent);
             intent.putExtra(EXTRA_MESSAGE, login);
+            startActivity(intent);
+
         }
         else {
             Log.d(LOG_TAG, "Incorrect user and/or password");

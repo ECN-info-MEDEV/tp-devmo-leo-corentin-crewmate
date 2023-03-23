@@ -21,9 +21,13 @@ public class EventListActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     private EventListAdapter mAdapter;
 
+    public static final String EXTRA_MESSAGE = "com.example.devmocorentinleo.extra.MESSAGE";
+
     private ToggleButton mEvents;
     private ToggleButton mMy_profile;
     private ToggleButton mChat;
+
+    private String user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +36,8 @@ public class EventListActivity extends AppCompatActivity {
         mEvents = findViewById(R.id.button_event_eventsScreen);
         mMy_profile = findViewById(R.id.button_profile_eventsScreen);
         mChat = findViewById(R.id.button_chat_eventsScreen);
+        Intent intent = getIntent();
+        user = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
         for (int i = 0; i < 20; i++) {
             mEventList.addLast("Word " + i);
         }
@@ -53,6 +59,8 @@ public class EventListActivity extends AppCompatActivity {
         mChat.setChecked(true);
         mMy_profile.setChecked(false);
         Intent intent = new Intent(this, ChatActivity.class);
+        Log.d(LOG_TAG, user);
+        intent.putExtra(EXTRA_MESSAGE, user);
         startActivity(intent);
 
     }
@@ -63,6 +71,8 @@ public class EventListActivity extends AppCompatActivity {
         mChat.setChecked(false);
         mMy_profile.setChecked(true);
         Intent intent = new Intent(this, ProfileActivity.class);
+        Log.d(LOG_TAG, user);
+        intent.putExtra(EXTRA_MESSAGE, user);
         startActivity(intent);
     }
 
