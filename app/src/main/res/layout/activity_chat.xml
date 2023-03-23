@@ -4,61 +4,53 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EventListActivity">
+    tools:context=".ChatActivity">
 
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerview"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp"></androidx.recyclerview.widget.RecyclerView>
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="@+id/recyclerview"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
         <ToggleButton
-            android:id="@+id/button_event_eventsScreen"
+            android:id="@+id/button_event_chatScreen"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="false"
+            android:onClick="goToEvents_from_chat"
             android:text="@string/events"
             android:textAlignment="center"
-            android:layout_weight="1"
-            android:checked="true"
             android:textOff="@string/events"
-            android:textOn="@string/events"
-            android:onClick="stay_events"/>
+            android:textOn="@string/events" />
 
         <ToggleButton
-            android:id="@+id/button_profile_eventsScreen"
+            android:id="@+id/button_profile_chatScreen"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="false"
+            android:onClick="goToProfile_from_chat"
             android:text="@string/my_profile"
             android:textAlignment="center"
-            android:layout_weight="1"
-            android:checked="false"
             android:textOff="@string/my_profile"
-            android:textOn="@string/my_profile"
-            android:onClick="goToProfile"/>
-
+            android:textOn="@string/my_profile" />
 
 
         <ToggleButton
-            android:id="@+id/button_chat_eventsScreen"
+            android:id="@+id/button_chat_chatScreen"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/chat"
             android:layout_weight="1"
+            android:checked="true"
+            android:onClick="stay_chat"
+            android:text="@string/chat"
             android:textAlignment="center"
-            android:checked="false"
             android:textOff="@string/chat"
-            android:textOn="@string/chat"
-            android:onClick="goToChat"/>
+            android:textOn="@string/chat" />
 
     </LinearLayout>
 
