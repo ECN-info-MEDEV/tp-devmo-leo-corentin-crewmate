@@ -14,7 +14,9 @@ It displays two text input, and a button "login", under the title of the applica
 </ol> 
 
 ## List of events
+The Event List Screen is composed of a List of Event, with a picture for each event, a title, the event's organizer name and the date of the event. Each event have their own informations. There is also two button, for edit and delete the events, but currently, theses button have no functionnality implemented
 
+When the user click on an event, it open a specific page with the informations of the event, with the title, the picture, the date, the name of the organizer, and the description of the event
   <!---
 Corentin, décrit ta liste ici, et le comportement quand tu cliques sur un event
 --->
@@ -28,6 +30,6 @@ At the bottom of the screen, three toggle buttons allow to navigate between the 
 It's an empty screen. Coding a chat is hard.
 
 ## User 
-A screen displaying the user name used when login.
+A screen displaying the user name used when login. And that's all.
 
 
