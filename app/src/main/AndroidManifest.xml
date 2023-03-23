@@ -31,15 +31,15 @@
             android:label="@string/chat" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.devmocorentinleo.EventListActivity" />
+                android:value="com.example.devmocorentinleo.MainActivity" />
 
         </activity>
         <activity
             android:name=".ProfileActivity"
-            android:label="@string/chat" >
+            android:label="@string/my_profile" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.devmocorentinleo.EventListActivity" />
+                android:value="com.example.devmocorentinleo.MainActivity" />
 
         </activity>
     </application>

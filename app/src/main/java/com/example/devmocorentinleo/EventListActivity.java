@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
@@ -15,6 +16,7 @@ import android.view.View;
 import java.util.LinkedList;
 
 public class EventListActivity extends AppCompatActivity {
+    private static final String LOG_TAG = EventListActivity.class.getSimpleName();
     private final LinkedList<String> mEventList = new LinkedList<>();
     private RecyclerView mRecyclerView;
     private EventListAdapter mAdapter;
@@ -46,6 +48,7 @@ public class EventListActivity extends AppCompatActivity {
 
     }
     public void goToChat(View view){
+        Log.d(LOG_TAG, "From events to chat");
         mEvents.setChecked(false);
         mChat.setChecked(true);
         mMy_profile.setChecked(false);
@@ -55,6 +58,7 @@ public class EventListActivity extends AppCompatActivity {
     }
 
     public void goToProfile(View view) {
+        Log.d(LOG_TAG, "From events to profile");
         mEvents.setChecked(false);
         mChat.setChecked(false);
         mMy_profile.setChecked(true);
@@ -63,6 +67,7 @@ public class EventListActivity extends AppCompatActivity {
     }
 
     public void stay_events(View view){
+        Log.d(LOG_TAG, "Stay in events");
         mEvents.setChecked(true);
         Context context = getApplicationContext();
         CharSequence text = "You're already there";
