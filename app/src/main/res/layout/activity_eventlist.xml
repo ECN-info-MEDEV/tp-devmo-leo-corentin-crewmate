@@ -25,28 +25,37 @@
         <ToggleButton
             android:id="@+id/button_event"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:text="@string/events"
             android:textAlignment="center"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:checked="true"
+            android:textOff="@string/events"
+            android:textOn="@string/events"/>
 
         <ToggleButton
             android:id="@+id/button_profile"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:text="@string/my_profile"
             android:textAlignment="center"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:checked="false"
+            android:textOff="@string/my_profile"
+            android:textOn="@string/my_profile"/>
 
 
 
         <ToggleButton
             android:id="@+id/chat_button"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:text="@string/chat"
             android:layout_weight="1"
-            android:textAlignment="center"/>
+            android:textAlignment="center"
+            android:checked="false"
+            android:textOff="@string/chat"
+            android:textOn="@string/chat"/>
 
     </LinearLayout>
 
