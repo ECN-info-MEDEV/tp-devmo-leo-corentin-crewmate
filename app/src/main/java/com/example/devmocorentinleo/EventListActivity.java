@@ -27,9 +27,9 @@ public class EventListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_eventlist);
-        mEvents = findViewById(R.id.button_event);
-        mMy_profile = findViewById(R.id.button_profile);
-        mChat = findViewById(R.id.button_chat);
+        mEvents = findViewById(R.id.button_event_eventsScreen);
+        mMy_profile = findViewById(R.id.button_profile_eventsScreen);
+        mChat = findViewById(R.id.button_chat_eventsScreen);
         for (int i = 0; i < 20; i++) {
             mEventList.addLast("Word " + i);
         }
@@ -62,10 +62,10 @@ public class EventListActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void stay(View view){
+    public void stay_events(View view){
         mEvents.setChecked(true);
         Context context = getApplicationContext();
-        CharSequence text = "You're there already";
+        CharSequence text = "You're already there";
         int duration = Toast.LENGTH_SHORT;
 
         Toast toast = Toast.makeText(context, text, duration);
