@@ -39,11 +39,15 @@ public class EventListAdapter extends RecyclerView.Adapter<EventListAdapter.List
 
     class ListViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public final TextView listItemView;
+        public final TextView dateItemView;
+        public final TextView authorItemView;
         final EventListAdapter mAdapter;
 
         public ListViewHolder(View itemView, EventListAdapter adapter) {
             super(itemView);
             listItemView = itemView.findViewById(R.id.event_title);
+            dateItemView = itemView.findViewById(R.id.event_date);
+            authorItemView = itemView.findViewById(R.id.event_author);
             this.mAdapter = adapter;
             itemView.setOnClickListener(this);
 
@@ -80,7 +84,11 @@ public class EventListAdapter extends RecyclerView.Adapter<EventListAdapter.List
     @Override
     public void onBindViewHolder(ListViewHolder holder, int position) {
         String mCurrent = mEventList.get(position);
+        String mCurrentDate = mDateList.get(position);
+        String mCurrentAuthor = mAuthorList.get(position);
         holder.listItemView.setText(mCurrent);
+        holder.dateItemView.setText(mCurrentDate);
+        holder.authorItemView.setText(mCurrentAuthor);
     }
 
 
