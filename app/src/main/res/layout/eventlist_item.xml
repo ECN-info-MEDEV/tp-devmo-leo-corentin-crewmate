@@ -24,7 +24,7 @@
         android:layout_width="63dp"
         android:layout_height="97dp"
         android:contentDescription="@string/event_picture"
-        app:srcCompat="@android:drawable/btn_plus"
+        app:srcCompat="@drawable/donut_circle"
         tools:srcCompat="@tools:sample/backgrounds/scenic[1]" />
 
     <TextView

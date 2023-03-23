@@ -3,7 +3,7 @@
     <string name="crewmate">Crewmate</string>
     <string name="password"></string>
     <string name="editText_login"></string>
-    <string name="activity_event_list_name">eventList</string>
+    <string name="activity_event_list_name">List of Events</string>
     <string name="chat">Chat</string>
     <string name="my_profile">My profile</string>
     <string name="events">Events</string>
