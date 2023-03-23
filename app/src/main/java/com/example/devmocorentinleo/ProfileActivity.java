@@ -1,4 +1,4 @@
 package com.example.devmocorentinleo;
 
-public class ProfileClass {
+public class ProfileActivity {
 }
