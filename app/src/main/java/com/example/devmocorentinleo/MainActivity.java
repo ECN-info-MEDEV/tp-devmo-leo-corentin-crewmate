@@ -1,17 +1,21 @@
 package com.example.devmocorentinleo;
 
+
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private static final String LOG_TAG = MainActivity.class.getSimpleName();
     private EditText mLoginEditText;
     private EditText mPasswdEditText;
+    public static final String EXTRA_MESSAGE = "com.example.devmocorentinleo.extra.MESSAGE";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
             Log.d(LOG_TAG, "We are currently in the if");
             Intent intent = new Intent(this, EventListActivity.class);
             startActivity(intent);
+            intent.putExtra(EXTRA_MESSAGE, login);
         }
         else {
             Log.d(LOG_TAG, "Incorrect user and/or password");
@@ -40,4 +45,5 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
 }

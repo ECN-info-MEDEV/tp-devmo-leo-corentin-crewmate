@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
@@ -22,6 +23,10 @@ public class ProfileActivity extends AppCompatActivity {
         mEvents = findViewById(R.id.button_event_profileScreen);
         mMy_profile = findViewById(R.id.button_profile_profileScreen);
         mChat = findViewById(R.id.button_chat_profileScreen);
+        Intent intent = getIntent();
+        String user = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
+        TextView textView = findViewById(R.id.text_user);
+        textView.setText(user);
     }
 
     public void stay_profile(){
