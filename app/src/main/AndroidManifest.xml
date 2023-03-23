@@ -12,6 +12,16 @@
         android:theme="@style/Theme.DevMoCorentinLeo"
         tools:targetApi="31">
         <activity
+            android:name=".EventActivity"
+            android:label = "Event Page"
+            android:parentActivityName=".EventListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=
+                    "com.example.devmocorentinleo.EventListActivity" />
+        </activity>
+
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -22,11 +32,10 @@
         </activity>
         <activity
             android:name=".EventListActivity"
-            android:label="@string/activity_event_list_name" >
+            android:label="@string/activity_event_list_name">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.devmocorentinleo.MainActivity" />
-
         </activity>
     </application>
 
