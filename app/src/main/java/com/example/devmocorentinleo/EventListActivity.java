@@ -4,11 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
+
+import android.view.View;
+
 import android.widget.ToggleButton;
 
 import android.view.View;
@@ -18,6 +22,9 @@ import java.util.LinkedList;
 public class EventListActivity extends AppCompatActivity {
     private static final String LOG_TAG = EventListActivity.class.getSimpleName();
     private final LinkedList<String> mEventList = new LinkedList<>();
+    private final LinkedList<String> mDateList = new LinkedList<>();
+    private final LinkedList<String> mAuthorList = new LinkedList<>();
+    private final LinkedList<String> mDescriptionList = new LinkedList<>();
     private RecyclerView mRecyclerView;
     private EventListAdapter mAdapter;
 
@@ -27,7 +34,9 @@ public class EventListActivity extends AppCompatActivity {
     private ToggleButton mMy_profile;
     private ToggleButton mChat;
 
+
     private String user;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,12 +48,15 @@ public class EventListActivity extends AppCompatActivity {
         Intent intent = getIntent();
         user = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
         for (int i = 0; i < 20; i++) {
-            mEventList.addLast("Word " + i);
+            mEventList.addLast("Event number " + i);
+            mDateList.addLast(i + "/01/2023");
+            mAuthorList.addLast("Bob " + i);
+            mDescriptionList.addLast("Ceci est la description n°" + i + ": Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ante in nibh mauris cursus mattis molestie a iaculis. Aliquam etiam erat velit scelerisque in dictum non consectetur a.");
         }
         // Get a handle to the RecyclerView.
         mRecyclerView = findViewById(R.id.recyclerview);
         // Create an adapter and supply the data to be displayed.
-        mAdapter = new EventListAdapter(this, mEventList);
+        mAdapter = new EventListAdapter(this, mEventList, mDateList, mAuthorList, mDescriptionList);
         // Connect the adapter with the RecyclerView.
         mRecyclerView.setAdapter(mAdapter);
         // Give the RecyclerView a default layout manager.
@@ -53,6 +65,7 @@ public class EventListActivity extends AppCompatActivity {
 
 
     }
+
     public void goToChat(View view){
         Log.d(LOG_TAG, "From events to chat");
         mEvents.setChecked(false);
@@ -87,4 +100,5 @@ public class EventListActivity extends AppCompatActivity {
         toast.show();
 
     }
+
 }

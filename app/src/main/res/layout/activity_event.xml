@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EventActivity">
+
+    <ImageView
+        android:id="@+id/Event_page_picture"
+        android:layout_width="107dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/donut_circle"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/Event_page_title"
+        android:layout_width="230dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/textview"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.145"
+        app:layout_constraintStart_toEndOf="@+id/Event_page_picture"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/event_page_date"
+        android:layout_width="91dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/textview"
+        app:layout_constraintStart_toEndOf="@+id/Event_page_picture"
+        app:layout_constraintTop_toBottomOf="@+id/Event_page_title" />
+
+    <TextView
+        android:id="@+id/event_page_author"
+        android:layout_width="113dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.342"
+        app:layout_constraintStart_toEndOf="@+id/event_page_date"
+        app:layout_constraintTop_toBottomOf="@+id/Event_page_title" />
+
+    <TextView
+        android:id="@+id/event_page_description"
+        android:layout_width="403dp"
+        android:layout_height="135dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_sed_do_eiusmod_tempor_incididunt_ut_labore_et_dolore_magna_aliqua_ante_in_nibh_mauris_cursus_mattis_molestie_a_iaculis_aliquam_etiam_erat_velit_scelerisque_in_dictum_non_consectetur_a_egestas_egestas_fringilla_phasellus_faucibus_scelerisque_eleifend_donec_pretium_vulputate_vulputate_sapien_nec_sagittis_aliquam_malesuada_bibendum_fringilla_ut_morbi_tincidunt_augue_interdum_diam_ut_venenatis_tellus_in"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Event_page_picture" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
